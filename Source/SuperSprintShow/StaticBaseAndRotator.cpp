@@ -30,7 +30,7 @@ void AStaticBaseAndRotator::BeginPlay()
 void AStaticBaseAndRotator::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if (HasAuthority())
+	if (true)
 	{
 		// Rotate the base mesh
 		FRotator NewRotation = BaseMeshComponent->GetComponentRotation();

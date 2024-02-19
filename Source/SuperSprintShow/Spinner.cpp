@@ -33,7 +33,7 @@ void ASpinner::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (HasAuthority())
+	if (true)
 	{
 		// Rotate the actor	
 		AddActorLocalRotation(RotationSpeed * DeltaTime * Speed);
