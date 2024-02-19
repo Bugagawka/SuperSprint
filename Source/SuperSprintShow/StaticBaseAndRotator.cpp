@@ -33,11 +33,13 @@ void AStaticBaseAndRotator::Tick(float DeltaTime)
 	if (true)
 	{
 		// Rotate the base mesh
-		FRotator NewRotation = BaseMeshComponent->GetComponentRotation();
+		//FRotator NewRotation = BaseMeshComponent->GetComponentRotation();
+		//NewRotation.Yaw += DeltaTime * Speed; // Adjust the rotation speed as needed
+		//BaseMeshComponent->SetWorldRotation(NewRotation);
+		 // Rotate the rotating object mesh
+		FRotator NewRotation = RotatingObjectMeshComponent->GetComponentRotation();
 		NewRotation.Yaw += DeltaTime * Speed; // Adjust the rotation speed as needed
-		BaseMeshComponent->SetWorldRotation(NewRotation);
+		RotatingObjectMeshComponent->SetWorldRotation(NewRotation);
 	}
-	
-
 }
 
