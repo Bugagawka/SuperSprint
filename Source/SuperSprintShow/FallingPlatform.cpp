@@ -37,7 +37,7 @@ void AFallingPlatform::ReactivateActor()
 
 void AFallingPlatform::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if (OtherActor == GetWorld()->GetFirstPlayerController()->GetPawn())
+	if (HasAuthority() && OtherActor && OtherActor != this)   // == GetWorld()->GetFirstPlayerController()->GetPawn()
 	{
 		// Start a timer to deactivate the entire actor after a delay of 3 seconds
 		FTimerHandle DeactivateTimerHandle;

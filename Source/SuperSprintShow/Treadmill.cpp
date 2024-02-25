@@ -53,7 +53,7 @@ void ATreadmill::OnPlayerOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor*
 
 void ATreadmill::MoveCharacterForward()
 {
-    if (HasAuthority())
+    if (true)
     {
         if (OverlappingCharacter)
         {
